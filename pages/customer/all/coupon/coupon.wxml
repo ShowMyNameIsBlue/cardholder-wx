@@ -1,0 +1,13 @@
+<!--pages/owner/coupon/coupon.wxml-->
+<view class="body">
+  <view class="coupon-list" wx:if="{{array.length}}">
+    <view class="coupon-list-item"  wx:for="{{array}}" wx:key="index">
+      <image class="image" data-target="{{item.cid}}"  bindtap="modCoupon"  src="{{item.imgPath}}"></image>
+      <view class="desc">
+        <view class="name">{{item.name}}</view>
+        <view class="timeout">{{item.end}}</view>
+      </view>
+    </view>
+  </view>
+  <text class="notice" wx:else>未领取任何卡券</text>
+</view>

@@ -1,0 +1,21 @@
+<!--pages/owner/user/user.wxml-->
+
+<view class="body">
+  <view class="item">
+    <view class="name">用户名</view>
+    <view class="value">{{username}}</view>
+  </view>
+  <view class="item">
+    <view class="name">权限</view>
+    <view class="value">{{role?"商家":"消费者"}}</view>
+  </view>
+   <view class="item dis">
+    <view class="name">性别</view>
+    <view class="value">{{gender?"男":"女"}}</view>
+  </view>
+  <view class="item">
+    <view class="name">地区</view>
+    <view class="value">{{area}}</view>
+  </view>
+  <button class="but" bindtap="exit">退出登录</button>
+</view>

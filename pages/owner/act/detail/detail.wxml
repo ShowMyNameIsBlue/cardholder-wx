@@ -1,0 +1,31 @@
+<view class="body">
+  <view class="main">
+    <text class="title">{{title}}</text>
+    <view class="input-item">
+      <text class="name">活动名称</text>
+      <input class="inp" id="name" bindblur="getInput" value="{{name}}"></input>
+    </view>
+    <view class="input-item">
+      <text class="name">起始时间</text>
+      <picker class="inp" mode="date" id="start" start="{{time}}" bindchange="getInput">
+        <view class="picker">
+          当前选择: {{start}}
+        </view>
+      </picker>
+    </view>
+    <view class="input-item">
+      <text class="name">结束时间</text>
+      <picker class="inp" mode="date" id="end" start="{{start}}" bindchange="getInput">
+        <view class="picker">
+          当前选择: {{end}}
+        </view>
+      </picker> 
+    </view>
+    <view class="input-item intp-content">
+      <text class="name cont_name">活动内容</text>
+      <textarea class="inp" id="desc" bindblur="getInput" value="{{desc}}"></textarea>
+    </view>
+    <my-select class="input-item" title="绑定卡券" array="{{multiArray}}" bindSelectValue="setCouponId"></my-select>
+    <button class="but" bindtap="submit">完成</button>
+  </view>
+</view>

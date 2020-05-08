@@ -1,0 +1,87 @@
+/* pages/owner/act/act.wxss */.body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  padding-bottom: 20rpx;
+  overflow: scroll;
+  color: #555
+}
+
+.header {
+  width: 700rpx;
+  height: 80rpx;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: #03a9f4;
+  border-radius: 30rpx;
+}
+.act-list{
+   width: 700rpx;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.act-list-item{
+  background-color: white;
+  height: 350rpx;
+  width: 100%;
+  border-radius: 30rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+.title{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #b2dfdb;
+  font-size: 14px
+}
+
+.content{
+  width: 100%;
+  height: 230rpx;
+  background-color: whitesmoke;
+  font-size: 14px;
+  padding-top: 15rpx;
+  text-indent: 16rpx;
+}
+
+.options{
+  margin-top: 10rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 50rpx;
+  font-size: 14px;
+}
+.but{
+  width: 50%;
+  text-align: center;
+  line-height: 40rpx;
+}
+.mod {
+   border-right: 1px solid #b2dfdb;
+}
+
+.notice{
+  font-size: 14px;
+  width: 100%;
+  margin-top: 20rpx;
+  text-align: center;
+  color: #555
+}

@@ -1,0 +1,19 @@
+<!--pages/owner/act/act.wxml-->
+<view class="body">
+  <view class="header iconfont icon-tianjia" bindtap="create"></view>
+  <view class="act-list" wx:if="{{array.length}}">
+    <view class="act-list-item"  wx:for="{{array}}"  wx:key="index">
+      <view class="title">
+        <view class="name">{{item.name}}</view>
+        <view class="date">{{item.start}}/{{item.end}}</view>
+      </view>
+      <view class="content">{{item.desc}}</view>
+      <view class="options">
+        <view class="but mod" bindtap="modAct" data-target="{{item.id}}">修改</view>
+        <view class="but del" bindtap="delAct" data-target="{{item.id}}">删除</view>
+      </view>
+    </view>
+  </view>
+  <text class="notice" wx:else>未创建任何活动</text>
+</view>
+

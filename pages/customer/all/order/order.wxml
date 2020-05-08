@@ -1,0 +1,19 @@
+<view class="body">
+  <view class="order-list" wx:if="{{array.length}}">
+    <view class="item-warpper" wx:for="{{array}}" wx:key="index">
+      <text class="title">{{item.start}} 至 {{item.end}}</text>
+      <view class="order-list-item">
+        <view class="content">
+          <view class="desc">预约店铺：{{item.shopname}}</view>
+          <text class="desc">预约内容：{{item.content}}</text>
+        </view>
+        <view class="options" wx:if="{{item.status==1}}">店铺已接受</view>
+        <view class="options" wx:elif="{{item.status==2}}">店铺已拒绝 </view>
+        <view class="options" wx:else>
+          等待店铺处理
+        </view>
+      </view>`
+    </view>
+  </view>
+  <view class="notice" wx:else>未创建任何预约...</view>
+</view>

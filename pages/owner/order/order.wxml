@@ -1,0 +1,21 @@
+<!--pages/owner/order/order.wxml-->
+<view class="body">
+  <view class="order-list" wx:if="{{array.length}}">
+    <view class="item-warpper" wx:for="{{array}}" wx:key="index">
+      <text class="title">{{item.start}} 至 {{item.end}}</text>
+      <view class="order-list-item">
+        <view class="content">
+          <view class="desc">预约用户：{{item.username}}</view>
+          <text class="desc">预约内容：{{item.content}}</text>
+        </view>
+          <view class="options" wx:if="{{item.status==1}}">已接受</view>
+          <view class="options" wx:elif="{{item.status==2}}">已拒绝 </view>
+          <view class="options" wx:else>
+            <view class="item accept" data-target="{{[item.id,1]}}" bindtap="updateStatus">接受</view>
+            <view class="item reject" data-target="{{[item.id,0]}}" bindtap="updateStatus">拒绝</view>
+        </view>
+      </view>`
+    </view>
+  </view>
+  <view class="notice" wx:else>未收到任何预约...</view>
+</view>

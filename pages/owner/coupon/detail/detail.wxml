@@ -1,0 +1,40 @@
+<!--pages/owner/coupon/detail/detail.wxml-->
+<view class="body">
+  <view class="main">
+    <text class="title">{{title}}</text>
+    <view class="input-item">
+      <text class="name">名称</text>
+      <input class="inp" id="name" bindblur="getInput" value="{{name}}"></input>
+    </view>
+     <view class="input-item">
+      <text class="name">编号</text>
+      <input class="inp" id="number" bindblur="getInput" placeholder="若无可不填" value="{{number}}"></input>
+    </view>
+    <view class="input-item">
+      <text class="name">使用次数</text>
+      <input class="inp" id="count" bindblur="getInput" value="{{count}}"></input>
+    </view>
+    <view class="input-item"> 
+      <text class="name">起始时间</text>
+      <picker class="inp" mode="date" id="start" start="{{time}}" bindchange="getInput">
+        <view class="picker">
+          当前选择: {{start}}
+        </view>
+      </picker>
+    </view>
+    <view class="input-item">
+      <text class="name">结束时间</text>
+      <picker class="inp" mode="date" id="end" start="{{start}}" bindchange="getInput">
+        <view class="picker">
+          当前选择: {{end}}
+        </view>
+      </picker>
+    </view>
+    <view class="input-item input-upload">
+      <text class="name">上传图片</text>
+      <view class="inp" bindtap="uploadimg">点击上传</view>
+    </view>
+    <image src='{{source}}' class="image" wx:if="{{image_show}}"/>
+    <button class="but" bindtap="upload">完成</button>
+  </view>
+</view>

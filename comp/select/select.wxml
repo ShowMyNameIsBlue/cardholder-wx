@@ -1,0 +1,15 @@
+<view class='input-item'>
+  <view class='name'> {{title}}</view>
+  <!-- 下拉框 -->
+  <view class="inp">
+    <view class='' bindtap='bindShowMsg'>
+      {{selectName}}
+    </view>
+    <!-- 下拉需要显示的列表 -->
+    <view class="select_box" wx:if="{{select}}">
+      <view wx:for="{{array}}" wx:key="unique">
+        <view class="select_one" bindtap="mySelect" data-name="{{item}}">{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>

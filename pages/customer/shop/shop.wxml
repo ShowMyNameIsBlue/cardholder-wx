@@ -1,0 +1,20 @@
+<!--pages/customer/shop/shop.wxml-->
+<view class="body">
+  <view class="serach ">
+    <input class="inp" placeholder="搜索店铺" id="key" bindinput="getInput" bindtap="changeStatus"></input>
+    <text class="iconfont icon-sousuo"></text>
+    <text class="cancel" wx:if="{{cancel}}" bindtap="back">取消</text>
+  </view>
+  <view class="shop-item" wx:for="{{array}}" wx:key="index">
+    <view class="main"  data-target="{{item.id}}" bindtap="gotoDetail">
+      <image class="image" src="{{item.imgPath}}"></image>
+      <text class="name">{{item.name}}</text>
+      <text class="iconfont icon-youjiantou"></text>
+    </view>
+  </view>
+  <view class="shopList" wx:if="{{cancel}}">
+    <view class="shopItem" wx:for="{{result}}" wx:key="index" data-target="{{item.id}}" bindtap="gotoDetail">
+      {{item.name}}
+    </view>
+  </view>
+</view>

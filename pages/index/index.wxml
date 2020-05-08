@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="form" wx:if="{{hiddlen}}">
+    <view class="warn" wx:if="{{show}}">请输入正确的用户名和密码</view>
+    <view class="form-item">
+      <icon class="iconfont icon-xinfeng"></icon>
+      <input class=" item-username  " id="item_un" placeholder="用户名" value="{{username}}" bindinput="updateData"></input>
+    </view>
+    <view class="form-item">
+      <icon class=" iconfont icon-suo"></icon>
+      <input class=" item-password" id="item_pw" placeholder="密码" password value="{{password}}" bindinput="updateData"></input>
+    </view>
+    <button class="item-submit" bindtap="changeStatus">登录</button>
+    <text class="item-siginup" bind:tap="siginup">还没有账号？点击注册</text>
+  </view>
+  <my-prompt id="myprompt" bindclosePrompt="changeStatus" bindlogin="login" item1="用户登录" item2="商家登录"></my-prompt>
+</view>

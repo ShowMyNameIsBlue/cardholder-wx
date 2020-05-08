@@ -1,0 +1,9 @@
+/* pages/owner/summary/summary.wxss */
+.body{
+  width: 100%;
+  height: 100%
+}
+#mychart-dom-bar{
+width: 100%;
+  height: 100% 
+}

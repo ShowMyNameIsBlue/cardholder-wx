@@ -1,0 +1,57 @@
+/* pages/customer/customer.wxss */
+
+.body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  overflow: scroll;
+  color: #555;
+  padding-bottom: 120rpx;
+  box-sizing: border-box;
+}
+
+.act-item {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 650rpx;
+   font-size: 14px;
+}
+
+.item-content{
+  width: 100%;
+  height: 450rpx;
+  border-radius: 20rpx;
+  background-color: white;
+  margin-top: 10rpx;
+  overflow:hidden;
+}
+.bg{
+  display: block;
+  width: 100%;
+  height: 350rpx;
+  border-bottom: 1px solid darkcyan;
+}
+.desc{
+  line-height: 100rpx;
+  text-indent: 20rpx;
+}
+
+.tabbar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 1px
+}
+

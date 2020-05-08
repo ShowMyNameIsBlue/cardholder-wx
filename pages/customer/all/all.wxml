@@ -1,0 +1,21 @@
+<!--pages/owner/owner.wxml-->
+<view class="body">
+  <view class="header">
+    <image class="avator" src="{{userInfo.avatarUrl}}" bindtap="myinfo"></image>
+     <text class="nickname">{{userInfo.nickName}}</text>
+  </view>
+   <view class="main" bindtap="startWork">
+     <view  class="item item-vip">
+      <icon id="item-coupon" class="iconfont icon-VIP"></icon>
+      <text class="desc">我的卡券</text>
+    </view>
+     <view  class="item item-order">
+      <icon id="item-order" class="iconfont icon-yuyue"></icon>
+      <text class="desc">我的预约</text>
+    </view>
+    <view  class="item item-summary">
+      <icon id="item-summary" class="iconfont icon-shuju"></icon>
+      <text class="desc">数据总览</text>
+    </view>
+  </view>
+</view>

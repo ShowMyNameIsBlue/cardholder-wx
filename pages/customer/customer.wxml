@@ -1,0 +1,14 @@
+<!--pages/customer/customer.wxml-->
+<view class="body">
+  <view class="act-item" wx:for="{{array}}" wx:key="index">
+     <view class="item-date"><text decode="1">{{item.start}}&nbsp;至&nbsp;{{item.end}}</text></view>
+     <view class="item-content" data-target="{{item.id}}" bindtap="goto">
+        <image class="bg" src="{{item.imgPath}}" ></image>
+        <view class="desc">{{item.name}}</view>
+     </view>
+  </view>
+  <view class="tabbar">
+        <view class="tab-shop iconfont icon-shangdian" bindtap="gotoShop">商店</view>
+        <view class="tab-coupon iconfont icon-youhuiquan" bindtap="gotoAll">个人中心</view>
+  </view>
+</view>

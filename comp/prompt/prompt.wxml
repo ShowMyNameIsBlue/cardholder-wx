@@ -1,0 +1,7 @@
+<!--comp/prompt/prompt.wxml-->
+<view class="body" bindtap="getTarget" id="body" wx:if="{{show}}">
+    <view class="main" >
+      <view class="item item-1" id="item-1">{{item1}}</view>
+      <view class="item item-2" id="item-2">{{item2}}</view>
+    </view>
+</view>

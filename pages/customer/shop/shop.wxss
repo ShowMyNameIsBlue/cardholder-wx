@@ -1,0 +1,87 @@
+/* pages/customer/shop/shop.wxss */
+
+.body {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  color: #555;
+  font-size: 14px
+}
+
+.shop-item {
+  height: 120rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.name {
+  display: block;
+  width: 600rpx;
+  height: 120rpx;
+  padding-left: 20rpx;
+  line-height: 120rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+
+.iconfont {
+  font-size: 18px;
+}
+
+.serach {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative
+}
+
+.inp {
+  border-radius: 30rpx;
+  border: 1px solid darkcyan;
+  margin: 0 auto;
+  height: 60rpx;
+  width: 600rpx;
+  padding-left: 16px;
+}
+.icon-sousuo{
+  position: absolute;
+  right: 100rpx;
+  z-index: 1
+}
+
+.cancel{
+  width: 60rpx;
+  margin-right: 10rpx;
+}
+.shopList{
+  position: absolute;
+  top: 80rpx;
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+.shopItem{
+  padding-left: 30rpx;
+  height: 80rpx;
+  border-bottom: 1px solid #eee;
+  width: 700rpx;
+  margin: 0 auto;
+  line-height: 80rpx;
+}

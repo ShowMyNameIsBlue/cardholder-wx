@@ -1,0 +1,33 @@
+<!--pages/owner/owner.wxml-->
+<view class="body">
+  <view class="header">
+    <image class="avator" src="{{userInfo.avatarUrl}}" bindtap="myinfo"></image>
+     <text class="nickname">{{userInfo.nickName}}</text>
+  </view>
+   <view class="main" bindtap="startWork">
+     <view  class="item item-vip">
+      <icon id="item-vip" class="iconfont icon-VIP"></icon>
+      <text class="desc">会员卡</text>
+    </view>
+    <view  class="item item-coupon">
+      <icon id="item-coupon" class="iconfont icon-youhuiquan"></icon>
+      <text class="desc">优惠券</text>
+    </view>
+    <view  class="item item-act">
+      <icon id="item-act" class="iconfont icon-huodong" ></icon>
+      <text class="desc">活动</text>
+    </view>
+     <view  class="item item-order">
+      <icon id="item-order" class="iconfont icon-yuyue"></icon>
+      <text class="desc">预约</text>
+    </view>
+    <view  class="item item-shop">
+      <icon id="item-shop" class="iconfont icon-shangdian"></icon>
+      <text class="desc">商店</text>
+    </view>
+    <view  class="item item-summary">
+      <icon id="item-summary" class="iconfont icon-shuju"></icon>
+      <text class="desc">数据</text>
+    </view>
+  </view>
+</view>

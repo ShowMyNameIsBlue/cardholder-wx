@@ -1,0 +1,64 @@
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.form-item {
+  display: flex;
+  border-bottom: 1px solid black;
+  margin-bottom: 25rpx;
+  padding: 5rpx;
+  width: 350rpx;
+  align-items: center;
+}
+
+input {
+  padding-left: 20rpx;
+  height: 50rpx;
+}
+
+icon {
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-xinfeng {
+  padding-top: 12rpx;
+}
+
+.icon-suo {
+  padding-top: 10rpx;
+}
+
+.item-submit {
+  margin-top: 40rpx;
+}
+
+.item-siginup {
+  font-size: 24rpx;
+  margin-left: 10rpx;
+
+  color: #333;
+  border-bottom: 1px solid #333;
+}
+.form{
+  position: relative
+}
+.warn{
+  position: absolute;
+  font-size: 14px;
+  color:red;
+  top: -30rpx;
+}

@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/owner/shop/shop",
+    "pages/customer/all/all",
+    "pages/customer/all/user/user",
+    "pages/owner/user/user",
+    "pages/owner/owner",
+    "pages/index/siginup/siginup",
+    "pages/customer/all/summary/summary",
+    "pages/customer/all/order/order",
+    "pages/customer/all/coupon/coupon",
+    "pages/customer/customer",
+    "pages/customer/shop/detail/detail",
+    "pages/customer/shop/shop",
+    "pages/customer/act/act",
+    "pages/owner/summary/summary",
+    "pages/owner/order/order",
+    "pages/owner/vip/vip",
+    "pages/owner/coupon/coupon",
+    "pages/owner/vip/detail/detail",
+    "pages/owner/act/act",
+    "pages/owner/act/detail/detail",
+    "pages/owner/coupon/detail/detail",
+    "comp/select/select",
+    "pages/logs/logs",
+    "comp/prompt/prompt",
+    "comp/ec-canvas/ec-canvas"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#b2dfdb",
+    "navigationBarTitleText": "青柠卡包",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,37 @@
+<!--pages/owner/shop/shop.wxml-->
+<view class="body">
+  <view class="warn" wx-if="{{!ready }}">
+    <text class="content">暂无商店信息.....</text>
+    <button class="warn-btn" bindtap="create">点击创建</button>
+  </view>
+  <view class="ok" wx:if="{{ready}}">
+    <view class="header" wx:if="{{header_show}}">
+      <image class="avator" src="{{path}}"></image>
+    </view>
+    <view class="main">
+    <text class="title" wx:if="{{!header_show}}">商店信息</text>
+      <view class="input-item">
+        <text class="name">商店名称</text>
+        <input class="inp" id="name" bindblur="getInput" value="{{name}}"></input>
+      </view>
+      <view class="input-item">
+        <text class="name">服务类型</text>
+        <input class="inp" id="type" bindblur="getInput" value="{{type}}"></input>
+      </view>
+      <view class="input-item">
+        <text class="name">地理位置</text>
+        <text class="inp" id="area" bindtap="getArea">{{area}}</text>
+      </view>
+      <view class="input-item desc">
+        <text class="name">商店描述</text>
+        <textarea class="inp" id="desc" bindblur="getInput" value="{{desc}}" placeholder="写下商店的个性描述吧(^_^)"></textarea>
+      </view>
+      <view class="input-item input-upload">
+        <text class="name">商店照片</text>
+        <view class="inp" bindtap="uploadimg">点击上传</view>
+      </view>
+      <image src='{{source}}' class="image" wx:if="{{image_show}}" />
+      <button class="but" bindtap="checkValue">{{btnContent}}</button>
+    </view>
+  </view>
+</view>

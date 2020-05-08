@@ -1,0 +1,18 @@
+<!--pages/owner/coupon/coupon.wxml-->
+<view class="body">
+  <view class="header iconfont icon-tianjia" bindtap="create"></view>
+  <view class="coupon-list" wx:if="{{array.length}}">
+    <view class="coupon-list-item"  wx:for="{{array}}" wx:key="index">
+      <image class="image" src="{{item.cimgPath}}" bindtap="modCoupon" data-target="{{item.cid}}"></image>
+      <view class="desc">
+        <view class="name">{{item.cname}}</view>
+        <text class="iconfont icon-xuanxiang" data-id="{{index}}" bindtap="changeOption"></text>
+        <view class="option {{index ===isIndex?'show':'hide'}}">
+           <view class="opt-item mod" bindtap="modCoupon" data-target="{{item.cid}}">修改</view>
+           <view class="opt-item del " bindtap="delCoupon">删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <text class="notice" wx:else>未创建任何vip卡</text>
+</view>

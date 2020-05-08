@@ -1,0 +1,34 @@
+<!--pages/index/siginup/siginup.wxml-->
+<view class="view">
+  <view class="header">
+    <image class="avator" src="{{userInfo.avatarUrl}}">123</image>
+  </view>
+  <view class="body">
+    <text class="title">这里开始</text>
+    <text class="warn" wx:if="{{show}}">{{content}}</text>
+    <view class="inp">
+      <icon class="iconfont icon-xinfeng"></icon>
+      <input id="status_1" class="item item-username" placeholder="用户名" value="{{username}}" bindinput="updateData"/>
+      <icon type="{{status_1}}" size="20"></icon>
+    </view>
+    <view class="inp">
+      <icon class="iconfont icon-suo"></icon>
+      <input id="status_2" class="item item-password" password placeholder="密码(至少6位)" value="{{password}}"  bindinput="updateData"/>
+      <icon type="{{status_2}}" size="20"></icon>
+    </view>
+    <view class="inp">
+      <icon class="iconfont icon-suo"></icon>
+      <input id="status_3" class="item item-password" password placeholder="确认密码" value="{{pwd}}" bindinput="updateData" />
+      <icon type="{{status_3}}" size="20"></icon>
+    </view>
+    <view class="section">
+      <!-- <text class="radio-hd">角色</text> -->
+      <radio-group class="section" bindchange="radioChange">
+          <radio class="radio" checked value="0">普通用户</radio>
+          <radio class="radio" value="1">商家用户</radio>
+      </radio-group>
+    </view>
+    <button class="submit" bindtap="bindSubmit">完成</button>
+  </view>
+   <text class="notice" >新用户，你好！</text>
+</view>

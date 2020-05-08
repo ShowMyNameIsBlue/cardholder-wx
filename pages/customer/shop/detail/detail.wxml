@@ -1,0 +1,75 @@
+<!--pages/customer/shop/detail/detail.wxml-->
+<view class="body">
+  <view class="header">
+    <image class="img" src="{{shopDetail.simgPath}}"></image>
+    <view class="detail">
+      <text class="detail-name">店铺名称：{{shopDetail.sname}}</text>
+      <view class="desc">服务类型：{{shopDetail.stype}}</view>
+      <view class="desc">店铺地址：{{shopDetail.area}}</view>
+    </view>
+  </view>
+  <view class="main">
+    <view class="options" bindtap="checked">
+      <view class="opt  {{index ==1?'ceil':''}}" data-index="1">店铺卡券</view>
+      <view class="opt {{index ==2?'ceil':''}}" data-index="2">店铺评价</view>
+      <view class="opt  {{index ==3?'ceil':''}}" data-index="3">预约服务</view>
+    </view>
+    <view class="contents">
+      <view class="cont {{index ==1?'show':'hide'}}">
+        <view class="cont-coupon" wx:for="{{coupon}}" wx:key="index">
+          <image class="cop-image" src="{{item.cimgPath}}"></image>
+          <view class="cop-desc">
+            <view class="cop-name">{{item.cname}}</view>
+            <view class="cop-but" bindtap="getCard" data-target="{{item.cid}} ">领取</view>
+          </view>
+        </view>
+      </view>
+      <view class="cont {{index ==2?'show':'hide'}}">
+        <view class="cont-comment" wx:for="{{comment}}" wx:key="index">
+          <view class="com-name">用户：{{item.username}}</view>
+          <view class="com-desc">内容：{{item.words}}</view>
+        </view>
+      </view>
+      <view class="cont {{index ==3?'show':'hide'}}">
+        <view class="cont-order">
+          <view class="input-item">
+            <text class="name">选择日期</text>
+            <picker class="inp" mode="date" id="date" start="{{time}}" bindchange="getInput">
+              <view class="picker">
+                当前选择: {{date}}
+              </view>
+            </picker>
+          </view>
+           <view class="input-item">
+            <text class="name">开始时间</text>
+            <picker class="inp" mode="time" id="start" start="{{dateTime}}" bindchange="getInput">
+              <view class="picker">
+                当前选择: {{start}}
+              </view>
+            </picker>
+          </view>
+           <view class="input-item">
+            <text class="name">结束时间</text>
+            <picker class="inp" mode="time" id="end" start="{{start}}" bindchange="getInput">
+              <view class="picker">
+                当前选择: {{end}}
+              </view>
+            </picker>
+          </view>
+          <view class="input-item  inp-content">
+            <text class="name">预约内容</text>
+            <textarea class="inp" id="content" bindinput="getInput">
+            </textarea>
+          </view>
+          <button class="submitContent" bindtap="submitContent">完成</button>
+        </view>
+      </view>
+    </view>
+    <view class="notice  {{index ==1 && !coupon.length?'show':'hide'}}">该店铺未创建卡券</view>
+    <view class="notice  {{index ==2 && !comment.length?'show':'hide'}}">该店铺未收到任何评价</view>
+    <view class="inp-comment  {{index==2?'flex':'hide'}}">
+      <input class="words" placeholder="发表评论" id="words" bindblur="getInput"></input>
+      <view class="submit" bindtap="submit">提交</view>
+    </view>
+  </view>
+</view>

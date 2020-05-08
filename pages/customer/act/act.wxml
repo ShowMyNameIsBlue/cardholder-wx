@@ -1,0 +1,34 @@
+<view class="body">
+  <view class="main">
+    <text class="title">活动详情</text>
+    <view class="input-item">
+      <text class="name">活动店铺</text>
+      <view class="inp" >{{sname}}</view>
+    </view>
+     <view class="input-item">
+      <text class="name">店铺地址</text>
+      <view class="inp">{{area}}</view>
+    </view>
+    <view class="input-item">
+      <text class="name">活动名称</text>
+      <view class="inp">{{aname}}</view>
+    </view>
+    <view class="input-item">
+      <text class="name">起始时间</text>
+      <view class="inp">
+        {{start}}
+      </view>
+    </view>
+    <view class="input-item">
+      <text class="name">结束时间</text>
+      <view class="inp">
+        {{end}}
+      </view>
+    </view>
+    <view class="input-item intp-content">
+      <text class="name cont_name">活动内容</text>
+      <view class="inp textarea">{{desc}}</view>
+    </view>
+    <button class="but" bindtap="submit">领劵参加</button>
+  </view>
+</view>
